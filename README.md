@@ -1,5 +1,7 @@
 # SPED-Gen CLI
 
+[![npm](https://img.shields.io/npm/v/sped-gen-cli.svg)](https://www.npmjs.com/package/sped-gen-cli)
+
 > Command line interface para o [SPED-Gen](https://github.com/elvisgs/sped-gen)
 
 ## Instalação
