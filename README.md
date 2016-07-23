@@ -35,5 +35,41 @@ $ sped-gen <options>
 
 ### Exemplo
 ```shell
-$ sped-gen -f myConfig.js -l fiscal -a foo=bar baz=qux -o "./out/bloco{{bloco}}"
+$ sped-gen -f my-config.js -l fiscal -a foo=bar baz=qux -o "./out/bloco{{bloco}}"
+```
+
+## Arquivo de configuração
+Abaixo está um exemplo de arquivo de configuração que informa ao SPED-Gen para gerar múltiplos arquivos de acordo com o template `my-template.hbs` nos diretórios `./out/contrib/blocoXXXX` com os nomes `RegistroXXXX.txt`.
+
+*my-config.js:*
+
+```javascript
+'use strict';
+
+const fs = require('fs');
+
+module.exports = {
+  layoutSped: 'contrib',
+  singleFile: false,
+  template: fs.readFileSync('./my-template.hbs').toString(),
+  fileName: options => {
+    const layout = options.layoutSped;
+    return `./out/${layout}/bloco{{bloco}}/Registro{{id}}.txt`
+  },
+  filter: registro => {
+    // ...
+    return true;
+  },
+  handler: registro => {
+    // ...
+  },
+  mapper: registro => {
+    // ...
+    return registro;
+  },
+  aditionalFields: {
+    myKey: "value"
+    // ...
+  }
+};
 ```
