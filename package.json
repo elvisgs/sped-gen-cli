@@ -11,6 +11,10 @@
   "bin": {
     "sped-gen": "./cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elvisgs/sped-gen-cli"
+  },
   "keywords": [
     "sped",
     "generator",
