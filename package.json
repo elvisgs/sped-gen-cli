@@ -1,6 +1,6 @@
 {
   "name": "sped-gen-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "CLI para o SPED-Gen",
   "main": "cli.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "author": "Elvis Luciano Guimaraes <elvis.gs@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sped-gen": "^0.1.9",
+    "sped-gen": "^0.1.10",
     "yargs": "^4.8.1"
   },
   "devDependencies": {

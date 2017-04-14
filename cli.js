@@ -27,6 +27,12 @@ const argv = yargs
     type: 'string'
   })
 
+  .option('r', {
+    alias: 'layout-version',
+    describe: 'Versão do layout SPED',
+    type: 'string'
+  })
+
   .option('o', {
     alias: 'output-dir',
     describe: 'Diretório onde os arquivos gerados serão gravados.\nPode ser um template',
@@ -59,6 +65,7 @@ const argv = yargs
 const options = require(path.resolve(argv.f));
 
 options.layoutSped = options.layoutSped || argv.l;
+options.versaoLayout = options.versaoLayout || argv.r;
 
 if (argv.a && argv.a.length) {
   const aditionalFields = {};
