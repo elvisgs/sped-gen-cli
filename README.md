@@ -23,6 +23,8 @@ $ sped-gen <options>
 -l, --layout-sped       Layout SPED cujos metadados serão usados
                         [string] [opções: "fiscal", "contrib"] [padrão: "fiscal"]
 
+-r, --layout-version    Versão do layout SPED [string]
+
 -o, --output-dir        Diretório onde os arquivos gerados serão gravados.
                         Pode ser um template [string]
 
@@ -35,7 +37,7 @@ $ sped-gen <options>
 
 ### Exemplo
 ```shell
-$ sped-gen -f my-config.js -l fiscal -a foo=bar baz=qux -o "./out/bloco{{bloco}}"
+$ sped-gen -f my-config.js -l fiscal -r 011 -a foo=bar baz=qux -o "./out/bloco{{bloco}}"
 ```
 
 ## Arquivo de configuração
